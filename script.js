@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // コピー機能
     tableBody.addEventListener('click', (event) => {
-        if (event.target.classList.contains('kaomoji-btn')) {
+        if (event.target.classList.contains('copy-btn')) {
             const kaomoji = event.target.innerText;
             navigator.clipboard.writeText(kaomoji).then(() => {
                 const originalText = event.target.innerText;
