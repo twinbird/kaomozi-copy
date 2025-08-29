@@ -2,26 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const kaomojiTable = document.getElementById('kaomojiTable');
     const tableBody = kaomojiTable.getElementsByTagName('tbody')[0];
     const rows = tableBody.getElementsByTagName('tr');
-
-    // Kaomoji to button and remove copy button column
-    for (let i = 0; i < rows.length; i++) {
-        const kaomojiCell = rows[i].getElementsByTagName('td')[0];
-        const buttonCell = rows[i].getElementsByTagName('td')[2];
-
-        if (kaomojiCell) {
-            const kaomojiText = kaomojiCell.innerText;
-            kaomojiCell.innerHTML = ''; // Clear the cell
-            const button = document.createElement('button');
-            button.textContent = kaomojiText;
-            button.classList.add('kaomoji-btn');
-            kaomojiCell.appendChild(button);
-        }
-
-        if (buttonCell) {
-            rows[i].removeChild(buttonCell);
-        }
-    }
-
     const searchInput = document.getElementById('searchInput');
 
     // 検索機能
