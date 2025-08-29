@@ -1,0 +1,50 @@
+body {
+    font-family: sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+#kaomojiTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#kaomojiTable th, #kaomojiTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#kaomojiTable th {
+    background-color: #f2f2f2;
+}
+
+.copy-btn {
+    cursor: pointer;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.copy-btn:hover {
+    background-color: #e9e9e9;
+}
+
+
+
+.kaomoji-btn {
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
