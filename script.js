@@ -10,13 +10,20 @@ document.addEventListener('DOMContentLoaded', () => {
         const tableRows = tableBody.getElementsByTagName('tr');
 
         for (let i = 0; i < tableRows.length; i++) {
-            const name = tableRows[i].getElementsByTagName('td')[1];
+            const row = tableRows[i];
+            const name = row.getElementsByTagName('td')[1];
             if (name) {
                 const txtValue = name.textContent || name.innerText;
                 if (txtValue.toLowerCase().indexOf(filter) > -1) {
-                    tableRows[i].style.display = '';
+                    row.style.display = '';
                 } else {
-                    tableRows[i].style.display = 'none';
+                    row.style.display = 'none';
+                }
+            } else {
+                if (filter) {
+                    row.style.display = 'none';
+                } else {
+                    row.style.display = '';
                 }
             }
         }
